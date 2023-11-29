@@ -1,11 +1,87 @@
-body {
-    font-family: 'Arial', sans-serif;
+* {
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Glass Antiqua', cursive;
     margin: 0;
     padding: 0;
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
+  }
+  
+  body {
+    background-color: rgba(224, 168, 165, 0.99);
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
     padding: 20px;
-}
+    padding-right: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.408);
+  }
+  
+  h1 {
+    font-size: 3em;
+    color: #ff4d6d;
+    text-align: center;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  #locationOptions {
+    width: 90%;
+    margin-bottom: 20px;
+    background-color: #ffceed;
+    padding: 30px 10px;
+    box-shadow: 0 5px 30px rgba(103, 11, 17, 0.51);
+    position: relative;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #selectLocation,
+  #enterLocation {
+    margin-top: 20px;
+  }
+  
+  #selectLocation select,
+  #enterLocation input,
+  #enterLocation button {
+    height: 40px;
+    padding: 10px;
+    border: none;
+    font-size: 14px;
+    margin-right: 5px;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+  
+  #enterLocation button {
+    background-color: #ff96af;
+    color: #c13851;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  button {
+    padding: 10px;
+    margin-right: 10px;
+    cursor: grab;
+  }
+  
+  #dashboard {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .error-message {
+    color: #ff4d6d;
+  }

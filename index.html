@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Sunrise Sunset Dashboard</title>
-</head>
-<body>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" async></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@1,9..40,100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@1,9..40,100&family=Glass+Antiqua&display=swap" rel="stylesheet">
+    <title>ITMD 441 Lab 4</title>
+  </head>
+  <body>
     <div class="container">
-    </div>
-    <script src="script.js"></script>
-</body>
+      <h1>Sunrise - Sunset</h1>
+      <div id="locationOptions">
+        <div id="selectLocation">
+            <select id="locationSelect">
+              <option value="current">Use Current Location</option>
+              <option value="new-york">New York</option>
+              <option value="los-angeles">Los Angeles</option>
+              <option value="london">London</option>
+              <option value="tokyo">Tokyo</option>
+              <option value="sydney">Sydney</option>
+            </select>
+            <div id="enterLocation">
+                <input type="text" id="searchLocation" placeholder="Enter Location">
+                <button onclick="searchLocation()">Get Info</button>
+          </div>
+      <div id="dashboard"></div>
+    </div> 
+  </body>
 </html>
