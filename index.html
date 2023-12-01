@@ -1,37 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" async></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@1,9..40,100&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@1,9..40,100&family=Glass+Antiqua&display=swap" rel="stylesheet">
-    <title>ITMD 441 Lab 4</title>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Sunrise - Sunset</h1>
-      <div id="locationOptions">
-        <div id="selectLocation">
-            <select id="locationSelect">
-              <option value="current">Use Current Location</option>
-              <option value="new-york">New York</option>
-              <option value="los-angeles">Los Angeles</option>
-              <option value="london">London</option>
-              <option value="tokyo">Tokyo</option>
-              <option value="sydney">Sydney</option>
-            </select>
-            <div id="enterLocation">
-                <input type="text" id="searchLocation" placeholder="Enter Location">
-                <button onclick="searchLocation()">Get Info</button>
-          </div>
-      <div id="dashboard"></div>
-    </div> 
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ITMD 441 Lab 4</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" async></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@1,9..40,100&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@1,9..40,100&family=Glass+Antiqua&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>ITMD 441- LAB 4</h1>
+  </header>
+  <div class="container">
+    <div>
+      <h2>Sunrise & Sunset</h2>
+    </div>
+    <div class="time-buttons">
+      <button id="current-btn">Use Current Location</button>
+      <select id="location-select">
+        <option value="">Select Location</option>
+        <option value="43.7844,-88.7879">Wisconsin, USA</option>
+        <option value="23.6345,-102.5528">Mexico City, Mexico</option>
+        <option value="-33.8688,151.2093">Sydney, Australia</option>
+        <option value="40.7128,-74.0060">New York, USA</option>
+        <option value="35.8617,104.1954">China</option>
+        <option value="51.5099,-0.1180">London, UK</option>
+      </select>
+      <input type="text" id="search-box" placeholder="Enter Location">
+    </div>
+    <!-- Add an additional container around the data table with an ID -->
+    <div class="info-display" id="data-table-container" class="hidden">
+      <table id="data-table">
+        <thead>
+          <tr>
+            <th>Date:</th>
+            <th>Timezone:</th>
+            <th>Sunrise:</th>
+            <th>Sunset:</th>
+            <th>Dawn Today:</th>
+            <th>Dusk Today:</th>
+            <th>Day Length:</th>
+            <th>Solar Noon:</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Data will be automatically inserted here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <footer>
+    <div id="website">
+      <p><strong>By:</strong><a href="https://sunrisesunset.io/" target="_blank">SunriseSunset.io</a> &
+        <a href="https://geocode.maps.co/" target="_blank">Geocode API</a></p>
+    </div>
+  </footer>
+</body>
+
 </html>
